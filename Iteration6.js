@@ -16,13 +16,12 @@ const duplicates = [
     'soda'
   ];
 
-  const unique = [];
 
   function removeDuplicates(array) {
+    let unique = [];
     for (let i = 0; i < array.length; i++){
-        let element = array[i];
-      if( !unique.includes(element)){
-        unique.push(element);
+      if( !unique.includes(array[i])){
+        unique.push(array[i]);
       }
     }
     return unique;

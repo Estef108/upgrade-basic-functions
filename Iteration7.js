@@ -19,6 +19,9 @@ const nameFinder = [
   function finderName(array, element) {
     const existe = array.includes(element);
     const index = array.indexOf(element);
+    if(!existe){
+      return false;
+    }
     return {existe, index};
   }
 

@@ -7,21 +7,15 @@ const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
 function averageWord(param) {
     let sumaNumeros = 0;
     let sumaLetras = 0;
-    let palabra;
-    let numLetras;
     for (let i = 0; i < param.length; i++) {
         if (typeof param[i] === 'number') {
-            sumaNumeros = sumaNumeros += param[i];
+            sumaNumeros += param[i];
         } else if (typeof param[i] === 'string') {
-            palabra = param[i];
-            numLetras = palabra.length;
-            sumaLetras = sumaLetras += numLetras;
+            sumaLetras += param[i].length;
         }
     }
-    console.log(sumaNumeros);
-    console.log(sumaLetras);
+    console.log(sumaNumeros + sumaLetras);
 }
-
 
 averageWord(mixedElements);
 

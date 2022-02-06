@@ -15,40 +15,17 @@ const counterWords = [
     'code'
   ];
 
-  //console.log(counterWords.sort());
-  const unicos = [];
-  //const vecesRepetidas = [];
-  let contador = 1;
-  
-  /*function repeatCounter(arr) {
-    let arrayOrdenado = arr.sort();
-
-    for (let i = 0; i < arrayOrdenado.length; i++){
-      if (!unicos.includes(arrayOrdenado[i])){
-        unicos.push(arrayOrdenado[i]);
-      }else{
-        contador +=1;
-      }
-      
-    }
-    //console.log(contador);
-  }*/
-
-
-  console.log(unicos);
-  repeatCounter(counterWords);
- 
 
   function repeatCounter(arr) {
-    let arrayOrdenado = arr.sort();
-    let repetidas = [];
-    for (let element of arrayOrdenado){
-      if (!unicos.includes(element)){
-        unicos.push(element);
+    const repetitions = {};
+    for( let i = 0; i < arr.length; i++){
+      if (arr[i] in repetitions){
+        repetitions[arr[i]]++;
       }else{
-        repetidas.push(element);
-        contador +=1;
+        repetitions[arr[i]]= 1;
       }
     }
-    console.log(repetidas, contador);
+    return console.log(repetitions);
   }
+  
+repeatCounter(counterWords);

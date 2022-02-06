@@ -7,8 +7,8 @@ const numbers = [1, 2, 3, 5, 45, 37, 58];
 
 function sumAll(param) {
     let total = 0;
-    for (let i = 0; i < numbers.length; i++) {
-        total = total += numbers[i];
+    for (let i = 0; i < arr.length; i++) {
+        total = total += arr[i];
     }
     return total;
 }
